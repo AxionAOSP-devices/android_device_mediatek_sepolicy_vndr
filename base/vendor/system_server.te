@@ -414,6 +414,7 @@ allow system_server proc_usb_plat:dir search;
 
 # Search /proc/gpufreqv2
 allow system_server proc_gpufreqv2:dir search;
+allow system_server proc_gpufreqv2:file rw_file_perms;
 
 # Search /proc/mtkfb
 allow system_server proc_mtkfb:dir search;
