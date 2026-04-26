@@ -416,6 +416,17 @@ allow system_server proc_usb_plat:dir search;
 allow system_server proc_gpufreqv2:dir search;
 allow system_server proc_gpufreqv2:file rw_file_perms;
 
+# AxBurstEngine: GPU DVFS tuning via ged hal
+allow system_server sysfs_ged:dir search;
+allow system_server sysfs_ged:file rw_file_perms;
+
+# AxBurstEngine: CCI fabric freq via cm_mgr
+allow system_server sysfs_cm_mgr:dir search;
+allow system_server sysfs_cm_mgr:file rw_file_perms;
+
+# AxBurstEngine: PMQoS hold-fd on /dev/cpu_dma_latency
+allow system_server cpu_dma_latency_device:chr_file rw_file_perms;
+
 # Search /proc/mtkfb
 allow system_server proc_mtkfb:dir search;
 
